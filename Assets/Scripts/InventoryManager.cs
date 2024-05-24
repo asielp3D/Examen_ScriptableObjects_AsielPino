@@ -41,7 +41,7 @@ public class InventoryManager : MonoBehaviour
             {
                 weapons[i] = item;
                 weaponsNames[i].text = item.itemName;
-                weaponsPrices[i].text = item.itemPrice;
+                weaponsPrices[i].text = item.itemPrice.ToString();
                 weaponsSprites[i].sprite = item.itemSprite;
                 return;
             }
@@ -56,7 +56,7 @@ public class InventoryManager : MonoBehaviour
             {
                 armors[i] = item;
                 armorsNames[i].text = item.itemName;
-                armorsPrices[i].text = item.itemPrice;
+                armorsPrices[i].text = item.itemPrice.ToString();
                 armorsSprites[i].sprite = item.itemSprite;
                 return;
             }

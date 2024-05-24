@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickableItem : MonoBehaviour
 {
     public ScriptableItem item;
+    
 
     private SpriteRenderer spriteRenderer;
     
@@ -22,8 +23,19 @@ public class PickableItem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        InventoryManager.instance.AddWeapon(item);
-        InventoryManager.instance.AddArmor(item);
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            if(gameObject.layer == 6)
+            {
+                InventoryManager.instance.AddWeapon(item);
+            }
+
+            if(gameObject.layer == 7)
+            {
+                 InventoryManager.instance.AddArmor(item);
+            }
+        }
+    
         Destroy(this.gameObject);
     }
 }

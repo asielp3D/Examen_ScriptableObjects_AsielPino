@@ -17,8 +17,7 @@ public class ScriptableItem : ScriptableObject
     
     public string itemName;
 
-    //public int itemPrice; (perdon)
-    public string itemPrice;
+    public int itemPrice;
 
     public Sprite itemSprite;
 
